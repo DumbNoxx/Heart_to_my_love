@@ -27,14 +27,14 @@ class Corazon(Scene):
         titulo.move_to(ejes_graph.get_bottom()).shift(DOWN * 0.5)
         division_symbol = Text("/", font_size=8).scale(1.5)
         
-       # Crear los componentes de la expresión
+       
         part1 = Text("(x²)¹", font_size=28, color=WHITE)
-        part2 = division_symbol  # Usar el símbolo de división
+        part2 = division_symbol  
         part3 = Text("³ + 0.7 ⋅ sin(k ⋅ x) ⋅ √(3 - x²) = 0", font_size=28, color=WHITE)
         division_symbol.shift(UP * 0.25)
-        # Agrupar todos los componentes
+        
         exp = VGroup(part1, part2, part3)
-        exp.arrange(RIGHT,buff=0.1)  # Alinear horizontalmente
+        exp.arrange(RIGHT,buff=0.1)
         exp.move_to(titulo.get_bottom()).shift(DOWN * 0.4)
 
         k_value_ltx = Text(
